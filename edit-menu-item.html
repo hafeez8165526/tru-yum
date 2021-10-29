@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>edit menu item</title>
+</head>
+<body onload="changeForm()">
+    <header>
+        <div class="header-title">
+            <h2>truYum </h2>
+            <span><img src="images/restaurant-32.png" alt=""></span>
+            <!-- <a href="#"> Cart</a> -->
+            <a href="menu-item-list-admin.html">Menu</a>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <div class="menu-title">
+            <h2>Edit Menu Item</h2>
+        </div>
+        <div class="edit-form col-12">
+            <form action="edit-menu-item-status.html" id="form">
+                <label for="Name">Name</label> <br>
+                <input class="col-12" type="text" id="Name" name="name" placeholder="Enter Name" required><br>
+                <br>
+                    <div class="col-3">
+                        <label for="price">Price</label><br>
+                        <input type="number" required id="price">
+                    </div>
+                    <div class="col-3">
+                        <label for="Active" id="act">Active</label><br>
+                        <input type="radio" name="radio" value="Yes" id="yes" checked>Yes
+                        <input type="radio" name="radio" value="No" id="no">No
+                    </div>
+                    <div class="col-3"><label for="date">Date of launch</label>
+                    <br>
+                        <input type="text" required>
+                    </div>
+                    <div class="col-3"><label for="Category">Category</label><br>
+                        <select name="Category" id="Category">
+                            <option value="Starters">Starters</option>
+                            <option value="MainCourse">Main Course</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Drinks">Drinks</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <div class="col-2">
+                        <label for="freeDelivery"> Free Delivery</label>
+                        <input type="checkbox" id="freeDelivery" value="No" checked>
+                        <!-- <input type="checkbox" id="freeDelivery2" value="No" checked> -->
+                    </div>
+                    <br>
+                    <button type="submit" class="col-3" onclick="editItems();" >
+                        Save
+                    </button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js">
+        // changeForm();
+    </script>
+</body>
+</html>
