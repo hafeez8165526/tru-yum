@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg name = "pattern" value="dd/MM/yyyy" />
+	</bean>
+
+
+	<bean id="100" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="100"></property>
+		<property name="name" value="Sandwich"></property>
+		<property name="price" value="99.0f"></property>
+		<property name="active" value="true"></property>
+		<property name="dateOfLaunch" >
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="15/02/2000" />
+			</bean>
+		</property>
+		<property name="freeDelivery" value="true"></property>
+		<property name="category" value="Starter"></property>
+	</bean>
+
+	<bean id="101" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="101"></property>
+		<property name="name" value="Burger"></property>
+		<property name="price" value="100.14f"></property>
+		<property name="active" value="true"></property>
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="23/04/1998" />
+			</bean>
+		</property>
+		<property name="freeDelivery" value="true"></property>
+		<property name="category" value="Starter"></property>
+	</bean>
+
+	<bean id="102" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="102"></property>
+		<property name="name" value="Pizza"></property>
+		<property name="price" value="122.2f"></property>
+		<property name="active" value="false"></property>
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormat" factory-method="parse">
+				<constructor-arg value="09/05/1999" />
+			</bean>
+		</property>
+		<property name="freeDelivery" value="false"></property>
+		<property name="category" value="Main Course"></property>
+	</bean>
+
+	<bean id="menuItemList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="100"></ref>
+				<ref bean="101"></ref>
+				<ref bean="102"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
