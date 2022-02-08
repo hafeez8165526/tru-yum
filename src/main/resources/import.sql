@@ -1,0 +1,5 @@
+-- insert into usertable(username,password,role) values('saurabh','$2a$09$jUpnRFPwNAiQpYKmy6CZoOkw124fjR93GevTUyi3TlcLwlUQSGpWm','ADMIN');
+-- insert into usertable(username,password,role) values('akash','$2a$12$OlMIV0wmaBfd/lxNS/UpeOuptgqVauSr.z/Bs1RPE9jxQlN1YUZPW','USER');
+-- insert into usertable(username,password,role) values('sharath','$2a$12$G6uZC1yLFpXftGQ8ektote/ck63reOVyOZHImdGF2Vx8dmDRxRlwG','ADMIN');
+-- insert into usertable(username,password,role) values('priyanshi','xyz123','ADMIN');
+-- insert into usertable(username,password,role) values('spandana','abc123','USER');
